@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkShopEPSI.Pages.Page1">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0"  IsEnabled="False" BackgroundColor="#62C7FF" HorizontalOptions="FillAndExpand" Margin="0,-22,0,-6"
+              CornerRadius="20"></Button>
+                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                    <Label Text="Conseils Psychologues  " TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"  FontSize="20"></Label>
+                    <Label Text="conseils des consultants de renommées" TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" Margin="10,0,10,-10" ></Label>
+                </StackLayout>
+            </Grid>
+            <Button Text="Gérez vos crises" WidthRequest="413" HeightRequest="80" TextColor="Black" FontSize="Body" FontAttributes="Bold" BackgroundColor="#98E2C6"></Button>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="190"></RowDefinition>
+                    <RowDefinition Height="190"></RowDefinition>
+                </Grid.RowDefinitions>
+            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="green.png" HorizontalOptions="Start"></ImageButton>
+                <Label Text="Exercices de Sophrologie"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="green.png" HorizontalOptions="Start"></ImageButton>
+                <Label Text="Prenez une grande inpiration puis expirez"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="green.png" HorizontalOptions="Start"></ImageButton>
+                <Label Text="Videz-vous l'esprit et orientez-vous vers un objet auquel vous tenez"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

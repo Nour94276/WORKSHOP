@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkShopEPSI.Pages.connexion">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" >
+                <Image Source="img.png" ></Image>
+                <Label Text="Adresse Mail" FontSize="Micro" Margin="40,0,40,-5"></Label>
+                <Entry  x:Name="EMAIL" FontSize="Micro" Margin="40,0,40,-5"></Entry>
+                <Label x:Name="ERORMAIL" Text="Champs obligatoire*" TextColor="Red" FontSize="Micro" MaxLines="1" Margin="40,0,40,-5" IsVisible="false"></Label>
+                <Label  Text="Mot de passe"  FontSize="Micro" Margin="40,0,40,-5"></Label>
+                <Entry x:Name="MDP" FontSize="Micro" IsPassword="true"  Margin="40,0,40,-5"></Entry>
+                <Label x:Name="ERORMdp" Text="Champs obligatoire*" TextColor="Red" FontSize="Micro" MaxLines="1" Margin="40,0,40,-5" IsVisible="false"></Label>
+                <Label x:Name="ERORMdpOrMail" Text="Le mail ou le mot de passe est incorrect*" TextColor="Red" FontSize="Micro" MaxLines="1" Margin="40,0,40,-5" IsVisible="false"></Label>
+                <Button x:Name="Connexion" Text="Connexion"  TextColor="White" CornerRadius="10" Margin="40,30,40,0" Clicked="Connexion_Clicked"></Button>
+                <Label Text="En vous inscrivant vous acceptez nos" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0" ></Label>
+                <Label Text="Politiques de confidentialité" HorizontalOptions="CenterAndExpand"  ></Label>
+            </StackLayout>
+            <Grid VerticalOptions="EndAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Inscription" Margin="-5,0,-5,-5" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Je n'ai pas de compte."></Label>
+                    <Label Text="Je m'inscrit" TextColor="Black"></Label>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

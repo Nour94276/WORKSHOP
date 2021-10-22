@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1DFCBEF-FD4E-48D5-80FC-558A560E8784}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WorkShopEPSI.Droid</RootNamespace>
+    <AssemblyName>WorkShopEPSI.Android</AssemblyName>
+    <Deterministic>True</Deterministic>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>2.0.0.10</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.7.335</Version>
+    </PackageReference>
+    <PackageReference Include="Telerik.UI.for.Xamarin.DataControls">
+      <Version>2021.1.224.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\CustomWebViewRenderer.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\compressed.tracemonkey-pldi-09.pdf" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\78-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\78-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\78-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\78-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\78-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\78-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\78ms-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\78ms-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\83pv-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\90ms-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\90ms-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\90msp-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\90msp-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\90pv-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\90pv-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Add-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Add-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Add-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Add-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-CNS1-0.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-CNS1-1.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-CNS1-2.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-CNS1-3.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-CNS1-4.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-CNS1-5.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-CNS1-6.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-CNS1-UCS2.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-GB1-0.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-GB1-1.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-GB1-2.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-GB1-3.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-GB1-4.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-GB1-5.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-GB1-UCS2.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Japan1-0.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Japan1-1.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Japan1-2.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Japan1-3.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Japan1-4.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Japan1-5.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Japan1-6.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Japan1-UCS2.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Korea1-0.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Korea1-1.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Korea1-2.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Adobe-Korea1-UCS2.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\B5pc-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\B5pc-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\CNS-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\CNS-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\CNS1-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\CNS1-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\CNS2-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\CNS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\ETen-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\ETen-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\ETenms-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\ETenms-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\ETHK-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\ETHK-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Ext-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Ext-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Ext-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Ext-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GB-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GB-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GB-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GB-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBK-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBK-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBK2K-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBK2K-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBKp-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBKp-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBpc-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBpc-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBT-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBT-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBT-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBT-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBTpc-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\GBTpc-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Hankaku.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Hiragana.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKdla-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKdla-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKdlb-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKdlb-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKgccs-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKgccs-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKm314-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKm314-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKm471-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKm471-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKscs-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\HKscs-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Katakana.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSC-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSC-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSC-Johab-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSC-Johab-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSCms-UHC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSCms-UHC-HW-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSCms-UHC-HW-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSCms-UHC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSCpc-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\KSCpc-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\LICENSE" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\NWP-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\NWP-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\Roman.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniCNS-UCS2-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniCNS-UCS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniCNS-UTF16-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniCNS-UTF16-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniCNS-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniCNS-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniCNS-UTF8-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniCNS-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniGB-UCS2-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniGB-UCS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniGB-UTF16-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniGB-UTF16-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniGB-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniGB-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniGB-UTF8-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniGB-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS-UCS2-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS-UCS2-HW-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS-UCS2-HW-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS-UCS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS-UTF16-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS-UTF16-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS-UTF8-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS2004-UTF16-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS2004-UTF16-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS2004-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS2004-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS2004-UTF8-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJIS2004-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJISPro-UCS2-HW-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJISPro-UCS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJISPro-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJISX0213-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJISX0213-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJISX02132004-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniJISX02132004-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniKS-UCS2-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniKS-UCS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniKS-UTF16-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniKS-UTF16-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniKS-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniKS-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniKS-UTF8-H.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\UniKS-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\V.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\cmaps\WP-Symbol.bcmap" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\locale.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ach\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\af\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ak\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\an\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ar\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\as\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ast\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\az\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\be\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\bg\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\bn-BD\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\bn-IN\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\br\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\bs\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ca\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\cs\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\csb\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\cy\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\da\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\de\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\el\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\en-GB\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\en-US\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\en-ZA\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\eo\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\es-AR\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\es-CL\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\es-ES\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\es-MX\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\et\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\eu\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\fa\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ff\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\fi\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\fr\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\fy-NL\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ga-IE\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\gd\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\gl\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\gu-IN\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\he\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\hi-IN\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\hr\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\hu\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\hy-AM\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\id\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\is\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\it\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ja\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ka\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\kk\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\km\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\kn\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ko\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ku\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\lg\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\lij\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\lt\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\lv\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\mai\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\mk\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ml\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\mn\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\mr\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ms\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\my\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\nb-NO\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\nl\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\nn-NO\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\nso\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\oc\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\or\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\pa-IN\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\pl\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\pt-BR\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\pt-PT\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\rm\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ro\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ru\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\rw\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\sah\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\si\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\sk\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\sl\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\son\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\sq\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\sr\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\sv-SE\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\sw\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ta\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ta-LK\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\te\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\th\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\tl\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\tn\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\tr\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\uk\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\ur\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\vi\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\wo\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\xh\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\zh-CN\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\zh-TW\viewer.properties" />
+    <AndroidAsset Include="Assets\pdf.js\web\locale\zu\viewer.properties" />
+    <AndroidAsset Include="Assets\Content\Aide.pdf" />
+    <AndroidAsset Include="Assets\Content\chart.pdf" />
+    <AndroidAsset Include="Assets\Content\Fichesalternant.pdf" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.xml" />
+    <AndroidResource Include="Resources\layout\Toolbar.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logoINCL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorkShopEPSI\WorkShopEPSI.csproj">
+      <Project>{85415D44-5517-436E-B00B-A15389A77911}</Project>
+      <Name>WorkShopEPSI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\img4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\img3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\img2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\img1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\imgone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\img5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Navbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\RectangleRouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\POMPIERS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SAMU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\POLICE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ConseilsAmicaux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ConseilsPsycho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Conseils.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Consultations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\femme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\consultationActualite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\acceuilactualite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\acceuilConseil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\article2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\closebtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ALaProchaine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AvecPlaisir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Bonjour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ExcuseMoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\TelGrand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\msg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\TelPetit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Article25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\epsi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SituationCharte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AlternantFiche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Aide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\build\pdf.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\build\pdf.worker.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\compatibility.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\debugger.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\l10n.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\viewer.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\viewer.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\viewer.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\annotation-check.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\annotation-comment.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\annotation-help.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\annotation-insert.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\annotation-key.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\annotation-newparagraph.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\annotation-noicon.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\annotation-note.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\annotation-paragraph.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\findbarButton-next-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\findbarButton-next-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\findbarButton-next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\findbarButton-next%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\findbarButton-previous-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\findbarButton-previous-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\findbarButton-previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\findbarButton-previous%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\grab.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\grabbing.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\loading-icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\loading-small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\loading-small%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-documentProperties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-documentProperties%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-firstPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-firstPage%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-handTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-handTool%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-lastPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-lastPage%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-rotateCcw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-rotateCcw%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-rotateCw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\secondaryToolbarButton-rotateCw%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\texture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-bookmark%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-download%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-menuArrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-menuArrows%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-openFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-openFile%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-pageDown-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-pageDown-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-pageDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-pageDown%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-pageUp-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-pageUp-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-pageUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-pageUp%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-presentationMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-presentationMode%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-print%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-search%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-secondaryToolbarToggle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-sidebarToggle-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-sidebarToggle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-sidebarToggle%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-viewAttachments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-viewAttachments%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-viewOutline-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-viewOutline-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-viewOutline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-viewOutline%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-viewThumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-viewThumbnail%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-zoomIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-zoomIn%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-zoomOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdf.js\web\images\toolbarButton-zoomOut%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\enterprise.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties TriggeredFromHotReload="False" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

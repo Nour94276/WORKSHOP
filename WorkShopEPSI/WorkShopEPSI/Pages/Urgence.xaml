@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="WorkShopEPSI.Pages.Urgence">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical">
+
+            <Button HorizontalOptions="FillAndExpand"
+        VerticalOptions="Start"
+              HeightRequest="1"
+         BackgroundColor="#F56060"
+        TextColor="Transparent" 
+        Text="Show modal popup" 
+        x:Name="button1" >
+                <telerikPrimitives:RadPopup.Popup>
+                    <telerikPrimitives:RadPopup x:Name="popup"
+                                    Placement="Center"
+                                    IsModal="True"
+                                    OutsideBackgroundColor="#00e6e9ee"
+                                   >
+                        <telerikPrimitives:RadBorder 
+                CornerRadius="10"
+                BackgroundColor="White"
+                Padding="10">
+
+
+                            <StackLayout Orientation="Vertical" Margin="30" HorizontalOptions="Center">
+                                <ImageButton Source="closebtn.png" HorizontalOptions="EndAndExpand" Margin="10,-10,0,0" HeightRequest="30"  Clicked="Button_Clicked" ></ImageButton>
+                                <Label x:Name="NomUrg"  HorizontalOptions="Center" Margin="10"></Label>
+                                <Image x:Name="ImageUrg" HeightRequest="60" Source="" HorizontalOptions="Center" Margin="10"></Image>
+                                <Label x:Name="Description" HorizontalOptions="FillAndExpand" Margin="10"></Label>
+                                <ImageButton Source="TelGrand" BackgroundColor="Transparent" HeightRequest="50" Margin="10" ></ImageButton>
+                            </StackLayout>
+
+                        </telerikPrimitives:RadBorder>
+                    </telerikPrimitives:RadPopup>
+                </telerikPrimitives:RadPopup.Popup>
+            </Button>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0"  IsEnabled="False" BackgroundColor="#F56060" HorizontalOptions="FillAndExpand" Margin="0,-22,0,-6"
+              CornerRadius="20"></Button>
+                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                    <Label Text="SOS" TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"  FontSize="20"></Label>
+                    <Label Text="Contactez service en cas de danger, " TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" Margin="10,0,10,-10" ></Label>
+                    <Label Text="  besoins, crises" TextColor="White" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"  Margin="10" ></Label>
+
+                </StackLayout>
+            </Grid>
+            <ListView x:Name="ListViewUrgence" HasUnevenRows="True" ItemTapped="ListViewUrgence_ItemTapped" SeparatorColor="#f99a9a" ItemSelected="ListViewUrgence_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="30" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Margin="20,0,20,0" >
+                                <Image Source="{Binding img}" Margin="0,0,50,0" ></Image>
+                                <Label Text="{Binding NomUrgence}" TextColor="Black" Font="18" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

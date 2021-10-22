@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkShopEPSI.Pages.EPSI">
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ImageButton Grid.Row="0" Grid.Column="0" Source="epsi.png"  IsEnabled="False" BackgroundColor="#271549" HorizontalOptions="FillAndExpand" Margin="0,-22,0,-6"
+              CornerRadius="20"></ImageButton>
+        </Grid>
+        <StackLayout Orientation="Vertical" Margin="50">
+                <ImageButton Clicked="ImageButton_Clicked" Source="AlternantFiche.png" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton Clicked="ImageButton_Clicked_1" Source="Aide.png" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton Clicked="ImageButton_Clicked_2" Source="SituationCharte.png" BackgroundColor="Transparent"></ImageButton>
+                    <ImageButton></ImageButton>
+            </StackLayout>
+            <Label Text="Numéro à contacter en cas de besoins" HorizontalOptions="CenterAndExpand" FontSize="Body" FontAttributes="Bold"></Label>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <StackLayout Orientation="Vertical">
+                    <Label Text="01.56.78.75.46" Margin="10,20" BackgroundColor="LightGray"></Label>
+                    <Label Text="01.00.99.99.00" Margin="10,20" BackgroundColor="LightGray"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="01.42.42.14.28" Margin="10,20" BackgroundColor="LightGray"></Label>
+                    <Label Text="01.08.23.87.91" Margin="10,20" BackgroundColor="LightGray"></Label>
+                </StackLayout>
+            </StackLayout>
+            </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkShopEPSI.Pages.ConseilAmi">
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0"  IsEnabled="False" BackgroundColor="#3D78E3" HorizontalOptions="FillAndExpand" Margin="0,-22,0,-6"
+              CornerRadius="20"></Button>
+                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                    <Label Text="Conseils Amicaux" TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"  FontSize="20"></Label>
+                    <Label Text="entamez-bien la conversation" TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" Margin="10,0,10,-10" ></Label>
+                </StackLayout>
+            </Grid>
+            <Button Text="Lorsque vous parlez" WidthRequest="413" HeightRequest="80"
+                   CornerRadius="20" Margin="20,10" TextColor="Black" FontSize="Body"
+                   IsEnabled="False" FontAttributes="Bold" BackgroundColor="#FF9DD2"></Button>
+
+            <StackLayout Orientation="Horizontal" Margin="20,0">
+                <ImageButton Source="Bonjour.png" HorizontalOptions="Start" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton Source="ExcuseMoi.png" HorizontalOptions="Start" BackgroundColor="Transparent"></ImageButton>
+            </StackLayout>
+            <Button Text="Lorsque vous répondez" WidthRequest="413" HeightRequest="80"
+                   CornerRadius="20" Margin="20,10" TextColor="Black" FontSize="Body"
+                   IsEnabled="False" FontAttributes="Bold" BackgroundColor="#FFEF9D"></Button>
+
+            <StackLayout Orientation="Horizontal" Margin="20,0,20,20">
+                <ImageButton Source="AvecPlaisir.png" HorizontalOptions="Start" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton Source="ALaProchaine.png" HorizontalOptions="Start" BackgroundColor="Transparent"></ImageButton>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

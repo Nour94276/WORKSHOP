@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkShopEPSI.Pages.Menu">
+    <ScrollView>
+        <StackLayout>
+            <ImageButton Source="dec.png" HorizontalOptions="End" Margin="0,20,30,0" Clicked="ImageButton_Clicked" BackgroundColor="Transparent" HeightRequest="20"></ImageButton>
+            <StackLayout Orientation="Vertical"  Spacing="0"  VerticalOptions="FillAndExpand" Margin="10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Bienvenue" TextColor="Black" VerticalOptions="End" FontSize="Title"></Label>
+                    <Label x:Name="Prenom" TextColor="Gray" VerticalOptions="End" FontSize="Title"></Label>
+                </StackLayout>
+                <Label Text="Découvrez nos fonctionnalités !" Margin="0,30,0,0" TextColor="Gray" VerticalOptions="End" FontSize="Title"></Label>
+                <Grid HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="190"></RowDefinition>
+                        <RowDefinition Height="190"></RowDefinition>
+                        <RowDefinition Height="190"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <ImageButton x:Name="Consultation" Source="consultationActualite.png"  Clicked="Consultations_Clicked"  BackgroundColor="#FFCE70" Grid.Row="0"  Grid.Column="0"  CornerRadius="30" ></ImageButton>
+                    <Label TextColor="White" Text="Consultation"   Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center"></Label>
+                    <ImageButton x:Name="Conseil" Source="acceuilConseil.png"    Clicked="Conseils_Clicked"   BackgroundColor="#B4B7FC"   CornerRadius="30" Grid.Row="0" Grid.Column="1"  ></ImageButton>
+                    <Label TextColor="White" Text="Conseils" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" FontSize="15"  HorizontalOptions="Center"></Label>
+                    <ImageButton Clicked="Actualite_Clicked" Source="acceuilactualite.png" x:Name="Actualite"  Grid.Row="1" BackgroundColor="#4AED5B" Grid.Column="0"  CornerRadius="30"  ></ImageButton>
+                    <Label TextColor="White" Text="Actualités" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" FontSize="15"  HorizontalOptions="Center"></Label>
+                    <ImageButton  Source="femme.png"  x:Name="SOS" Clicked="Numéro_urgence_Clicked"  Grid.Row="1" BackgroundColor="#FCB4B4" Grid.Column="1"  CornerRadius="30"  ></ImageButton>
+                    <Label TextColor="White" Text="SOS" Grid.Row="1" Grid.Column="1" FontAttributes="Bold" FontSize="15"  HorizontalOptions="Center"></Label>
+                    <ImageButton  Source="epsi.png"  x:Name="EPSIbtn" Grid.Row="2" Grid.Column="1"   BackgroundColor="#271549" IsVisible="false"   CornerRadius="30" Clicked="EPSI_Clicked"  ></ImageButton>
+                    <ImageButton x:Name="Entreprise" Source="enterprise.png" Grid.Row="2" Grid.Column="0"   Clicked="Entreprise_Clicked"  BackgroundColor="#FF0000"   CornerRadius="30" ></ImageButton>
+                    <Label TextColor="White" Text="Entreprise"  Grid.Row="2" Grid.Column="0" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center"></Label>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

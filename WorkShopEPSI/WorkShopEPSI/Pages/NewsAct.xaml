@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             x:Class="WorkShopEPSI.Pages.NewsAct">
+    <ContentPage.Content>
+        <StackLayout>
+            <ContentView x:Name="popupImageView"  BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" >
+                    <StackLayout Orientation="Vertical" HeightRequest="200" WidthRequest="300" BackgroundColor="White">
+                        <Image WidthRequest="200" HeightRequest="200" x:Name="imgPopup"></Image>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+            <StackLayout Orientation="Vertical">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0"  IsEnabled="False" BackgroundColor="#4AED5B" HorizontalOptions="FillAndExpand" Margin="0,-15,0,-6"
+              CornerRadius="20"></Button>
+                    <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                        <Label Text="Actualité" TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"  FontSize="20"></Label>
+                        <Label Text="Retrouvez chaque jour les derniers News " TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" Margin="10,0,10,-10" ></Label>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+           
+            <ListView x:Name="ListViewNews" HasUnevenRows="True" ItemTapped="ListViewNews_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Margin="20">
+                                <ImageButton Source="{Binding image}" CornerRadius="20"></ImageButton>
+                                <Label Text="{Binding title}" FontAttributes="Bold" FontSize="Subtitle"></Label>
+                                <Label MaxLines="4" FontSize="Body" Text="{Binding description}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

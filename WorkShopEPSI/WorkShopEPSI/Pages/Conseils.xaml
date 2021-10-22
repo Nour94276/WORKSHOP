@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkShopEPSI.Pages.Conseils">
+    <ContentPage.Content>
+        <StackLayout Margin="0,0,0,5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0"  IsEnabled="False" BackgroundColor="#3D78E3" HorizontalOptions="FillAndExpand" Margin="0,-15,0,-6"
+              CornerRadius="20"></Button>
+                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                    <Label Text="Conseils" TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"  FontSize="20"></Label>
+                    <Label Text="Découvrez comment intéragir avec votre" TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" Margin="10,0,10,-10" ></Label>
+                    <Label Text="environement" TextColor="White" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"  Margin="10" ></Label>
+                </StackLayout>
+            </Grid>
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"></RowDefinition>
+                        <RowDefinition Height="300"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Grid.Row="0" Grid.Column="0">
+                        <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#62C7FF" CornerRadius="10" Source="ConseilsPsycho.png" WidthRequest="200" HeightRequest="300" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ></ImageButton>
+                        <Label Text="Conseils psychologiques" Margin="0,-35,0,0"  FontAttributes="Bold" FontSize="15" TextColor="White" HorizontalOptions="Center"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Grid.Row="1" Grid.Column="0">
+                        <ImageButton Clicked="ImageButton_Clicked_1" BackgroundColor="#6040E2" CornerRadius="10" Source="ConseilsAmicaux.png" WidthRequest="200" HeightRequest="300" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ></ImageButton>
+                        <Label Text="Conseils Amicaux" Margin="0,-35,0,0"  FontAttributes="Bold" FontSize="15" TextColor="White" HorizontalOptions="Center"></Label>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
